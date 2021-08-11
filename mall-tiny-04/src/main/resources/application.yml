@@ -6,6 +6,12 @@ spring:
     url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: xiaoruoruo1999
+    hikari:
+      maximumPoolSize: 10
+      minimumIdle: 2
+      idleTimeout: 600000
+      connectionTimeout: 30000
+      maxLifetime: 1800000
   redis:
     host: localhost # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
